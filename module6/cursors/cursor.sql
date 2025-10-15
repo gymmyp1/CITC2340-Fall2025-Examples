@@ -1,6 +1,8 @@
 -- This script displays the product_id, name, and price columns
 -- from the products table using a cursor
--- SET SERVEROUTPUT ON
+
+--Enable display of output from DBMS_OUTPUT.PUT_LINE calls
+SET SERVEROUTPUT ON
 
 DECLARE 
 	-- step 1: declare the variables 

@@ -1,7 +1,7 @@
 -- PL/SQL program to display the current date
 
 --Enable display of output from DBMS_OUTPUT.PUT_LINE calls
-SET SERVEROUTPUT ON;
+SET SERVEROUTPUT ON
 
 DECLARE
     todays_date DATE;
