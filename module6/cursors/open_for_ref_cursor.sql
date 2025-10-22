@@ -5,9 +5,8 @@ SET SERVEROUTPUT ON
 
 DECLARE 
 	-- declare a REF CURSOR type named t_product_cursor 
-	-- (similar to a C++ pointer)
-	TYPE t_product_cursor IS 
-		REF CURSOR RETURN products%ROWTYPE;
+	TYPE t_product_cursor IS REF CURSOR 
+		RETURN products%ROWTYPE;
 		
 	-- declare a t_product_cursor object named v_product_cursor 
 	v_product_cursor t_product_cursor;
