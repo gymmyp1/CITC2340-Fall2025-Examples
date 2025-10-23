@@ -2,13 +2,15 @@
 -- Define function called circle_area that which returns the area of a circle as a NUMBER. 
 -- The radius of the circle is passed as a parameter named p_radius to the function.
 
-CREATE FUNCTION circle_area ( 
+CREATE OR REPLACE FUNCTION circle_area (
     p_radius IN NUMBER
-) RETURN NUMBER AS 
-    v_pi	NUMBER := 3.1415926;
+)
+RETURN NUMBER
+AS
+    v_pi   NUMBER := 3.1415926;
     v_area NUMBER;
-BEGIN 
-    -- circle area is pi multiplied by the radius squared 
+BEGIN
+    -- Circle area is pi multiplied by the radius squared
     v_area := v_pi * POWER(p_radius, 2);
     RETURN v_area;
 END circle_area;
