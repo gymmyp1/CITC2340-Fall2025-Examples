@@ -21,5 +21,5 @@ END average_product_price;
 -- value 1 to the function to get the average price of products 
 -- whose product_type_id is 1:
 
--- SELECT average_product_price(1) FROM dual;
+SELECT average_product_price(1) FROM dual;
 

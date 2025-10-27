@@ -1,5 +1,5 @@
 
--- Define function called circle_area that which returns the area of a circle as a NUMBER. 
+-- Define a function called circle_area that returns the area of a circle as a NUMBER. 
 -- The radius of the circle is passed as a parameter named p_radius to the function.
 
 CREATE OR REPLACE FUNCTION circle_area (
@@ -17,11 +17,9 @@ END circle_area;
 /
 
 -- calls circle_area(), passing a radius of 2 to the function using positional notation:
-
--- SELECT circle_area(2) FROM dual;
+SELECT circle_area(2) FROM dual;
 
 -- In Oracle Database 11g and above, you can also use named and 
 -- mixed notation when calling functions.
-
--- SELECT circle_area(p_radius => 2) FROM dual;
 -- this passes the argument of 2 to p_radius.
+SELECT circle_area(p_radius => 2) FROM dual;

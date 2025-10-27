@@ -6,14 +6,14 @@ CREATE OR REPLACE PROCEDURE distance_check (
     p_distance_limit IN  NUMBER
 )
 AS
-    dlimit NUMBER;  -- variable to store the result of query
+    v_dlimit NUMBER;  -- variable to store the result of query
 BEGIN
     SELECT char_distance
-    INTO dlimit
+    INTO v_dlimit
     FROM charter
     WHERE char_trip = p_trip_id;
 
-    IF dlimit > p_distance_limit THEN
+    IF v_dlimit > p_distance_limit THEN
         DBMS_OUTPUT.PUT_LINE('Trip # ' || p_trip_id || ' was above the limit.');
     ELSE
         DBMS_OUTPUT.PUT_LINE('Trip # ' || p_trip_id || ' was not above the limit.');
