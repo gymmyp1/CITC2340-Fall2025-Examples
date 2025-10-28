@@ -1,3 +1,4 @@
+-- Demo how to use product_package functionality
 --Use the product package's product ref cursor
 
 DECLARE 
@@ -23,8 +24,8 @@ BEGIN
 		
 		-- use DBMS_OUTPUT.PUT_LINE() to display the variables 
 		DBMS_OUTPUT.PUT_LINE(
-			'v_product_id = ' || v_product_id || ', v_name = ' || v_name ||
-			', v_price = ' || v_price );
+			'v_product_id = ' || v_product_id || ', v_name = ' || 
+			 v_name || ', v_price = ' || v_price );
 	END LOOP;
 
 	-- step 5: close the cursor

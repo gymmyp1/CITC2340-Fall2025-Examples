@@ -15,7 +15,7 @@ END product_package;
 -- The update_product_price() procedure multiplies the price of a product and commits the change.
 
 CREATE PACKAGE OR REPLACE BODY product_package AS 
-    FUNCTION get_products_ref_cursor 
+FUNCTION get_products_ref_cursor 
     RETURN t_ref_cursor IS
     v_products_ref_cursor t_ref_cursor;
 BEGIN
