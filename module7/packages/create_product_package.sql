@@ -14,9 +14,11 @@ END product_package;
 -- which contains the rows retrieved from the products table.
 -- The update_product_price() procedure multiplies the price of a product and commits the change.
 
-CREATE PACKAGE OR REPLACE BODY product_package AS 
+CREATE OR REPLACE PACKAGE BODY product_package AS 
+
 FUNCTION get_products_ref_cursor 
-    RETURN t_ref_cursor IS
+    RETURN t_ref_cursor 
+AS
     v_products_ref_cursor t_ref_cursor;
 BEGIN
     -- get the REF CURSOR
@@ -31,7 +33,9 @@ END get_products_ref_cursor;
 PROCEDURE update_product_price ( 
     p_product_id IN products.product_id%TYPE,
     p_factor	IN NUMBER
-    ) AS v_product_count INTEGER;
+    )
+AS 
+    v_product_count INTEGER;
 BEGIN 
     -- count the # of products w/ the supplied product_id 
     -- (count will be 1 if the product exists) 
